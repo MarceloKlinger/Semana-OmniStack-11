@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Be The Hero" src="./github/logon.png" width="250px" />
+    <img alt="Be The Hero" src="./github/logo.png" width="250px" />
 </h1>
 
 <h4 align="center">
@@ -44,9 +44,6 @@ No mobile os heróis conseguem visualizar todos os casos publicados pelas ongs e
 <p align="center">
   <img alt="register" src=".github/register.png" width="100%">
 </p>
-<p align="center">
-  <img alt="register2" src=".github/register2.png" width="100%">
-</p>
 
 - Perfil da ONG:
 <p align="center">
@@ -56,9 +53,6 @@ No mobile os heróis conseguem visualizar todos os casos publicados pelas ongs e
 - Cadastro de novo caso:
 <p align="center">
   <img alt="newIncident" src=".github/newIncident.png" width="100%">
-</p>
-<p align="center">
-  <img alt="newIncident2" src=".github/newIncident2.png" width="100%">
 </p>
 
 

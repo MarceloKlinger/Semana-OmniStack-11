@@ -5,14 +5,13 @@ module.exports = {
     const { page = 1 } = request.query;
 
     const [count] = await connection('incidents').count();
+    response.header('X-Total-Count', count['count(*)']);
 
     const incidents = await connection('incidents')
-      .innerJoin('ongs')
+      .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
       .limit(5)
       .offset((page - 1) * 5)
       .select(['incidents.*', 'ongs.name', 'ongs.email', 'ongs.whatsapp', 'ongs.city', 'ongs.uf'])
-
-      response.header('X-Total-Count', count['count(*)'])
 
     return response.json(incidents);
   },
@@ -42,7 +41,7 @@ module.exports = {
       .first();
 
     if (incident.ong_id !== ong_id) {
-      return response.status(401).json({ error: "Operation not permitted" });
+      return response.status(401).json({ error: "Não autorizado!" });
     }
 
     await connection("incidents")
